@@ -46,7 +46,8 @@ namespace TravelAgencyWinForms
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            (new WindowEmployeeActions(ActiveConnection, (int)dataGridViewEmployees.CurrentRow.Cells[0].Value,
+            (new WindowEmployeeActions(ActiveConnection, 
+                (int)dataGridViewEmployees.CurrentRow.Cells[0].Value,
                 (string)(dataGridViewEmployees.CurrentRow.Cells[1].Value),
                 (string)(dataGridViewEmployees.CurrentRow.Cells[2].Value),
                 (string)(dataGridViewEmployees.CurrentRow.Cells[3].Value),

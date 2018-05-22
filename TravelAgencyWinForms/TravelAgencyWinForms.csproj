@@ -75,6 +75,12 @@
     <Compile Include="WindowHotelActions.Designer.cs">
       <DependentUpon>WindowHotelActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowHotels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowHotels.Designer.cs">
+      <DependentUpon>WindowHotels.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowHotelActions.resx">
       <DependentUpon>WindowHotelActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowHotels.resx">
+      <DependentUpon>WindowHotels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowLogin.resx">
       <DependentUpon>WindowLogin.cs</DependentUpon>

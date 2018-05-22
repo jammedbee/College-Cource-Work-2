@@ -58,6 +58,24 @@
             this.fOODTYPEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nEWToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hOTELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cITYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLIMATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOUNTRYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rOUTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vOUCHERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +114,13 @@
             this.pASSPORTToolStripMenuItem,
             this.cLIENTToolStripMenuItem,
             this.lOGINToolStripMenuItem,
-            this.fOODTYPEToolStripMenuItem});
+            this.fOODTYPEToolStripMenuItem,
+            this.hOTELToolStripMenuItem,
+            this.cITYToolStripMenuItem,
+            this.cLIMATEToolStripMenuItem,
+            this.cOUNTRYToolStripMenuItem,
+            this.rOUTEToolStripMenuItem,
+            this.vOUCHERToolStripMenuItem});
             this.dEVELOPToolStripMenuItem.Name = "dEVELOPToolStripMenuItem";
             this.dEVELOPToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.dEVELOPToolStripMenuItem.Text = "DEVELOP";
@@ -138,14 +162,14 @@
             // nEWToolStripMenuItem1
             // 
             this.nEWToolStripMenuItem1.Name = "nEWToolStripMenuItem1";
-            this.nEWToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.nEWToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem1.Text = "NEW";
             this.nEWToolStripMenuItem1.Click += new System.EventHandler(this.nEWToolStripMenuItem1_Click);
             // 
             // eDITToolStripMenuItem1
             // 
             this.eDITToolStripMenuItem1.Name = "eDITToolStripMenuItem1";
-            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem1.Text = "EDIT";
             this.eDITToolStripMenuItem1.Click += new System.EventHandler(this.eDITToolStripMenuItem1_Click);
             // 
@@ -281,16 +305,145 @@
             // nEWToolStripMenuItem8
             // 
             this.nEWToolStripMenuItem8.Name = "nEWToolStripMenuItem8";
-            this.nEWToolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.nEWToolStripMenuItem8.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem8.Text = "NEW";
             this.nEWToolStripMenuItem8.Click += new System.EventHandler(this.nEWToolStripMenuItem8_Click);
             // 
             // eDITToolStripMenuItem7
             // 
             this.eDITToolStripMenuItem7.Name = "eDITToolStripMenuItem7";
-            this.eDITToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.eDITToolStripMenuItem7.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem7.Text = "EDIT";
             this.eDITToolStripMenuItem7.Click += new System.EventHandler(this.eDITToolStripMenuItem7_Click);
+            // 
+            // hOTELToolStripMenuItem
+            // 
+            this.hOTELToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem9,
+            this.eDITToolStripMenuItem8});
+            this.hOTELToolStripMenuItem.Name = "hOTELToolStripMenuItem";
+            this.hOTELToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hOTELToolStripMenuItem.Text = "HOTEL";
+            this.hOTELToolStripMenuItem.Click += new System.EventHandler(this.hOTELToolStripMenuItem_Click);
+            // 
+            // nEWToolStripMenuItem9
+            // 
+            this.nEWToolStripMenuItem9.Name = "nEWToolStripMenuItem9";
+            this.nEWToolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
+            this.nEWToolStripMenuItem9.Text = "NEW";
+            this.nEWToolStripMenuItem9.Click += new System.EventHandler(this.nEWToolStripMenuItem9_Click);
+            // 
+            // eDITToolStripMenuItem8
+            // 
+            this.eDITToolStripMenuItem8.Name = "eDITToolStripMenuItem8";
+            this.eDITToolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.eDITToolStripMenuItem8.Text = "EDIT";
+            this.eDITToolStripMenuItem8.Click += new System.EventHandler(this.eDITToolStripMenuItem8_Click);
+            // 
+            // cITYToolStripMenuItem
+            // 
+            this.cITYToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem10,
+            this.eDITToolStripMenuItem9});
+            this.cITYToolStripMenuItem.Name = "cITYToolStripMenuItem";
+            this.cITYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cITYToolStripMenuItem.Text = "CITY";
+            // 
+            // nEWToolStripMenuItem10
+            // 
+            this.nEWToolStripMenuItem10.Name = "nEWToolStripMenuItem10";
+            this.nEWToolStripMenuItem10.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem10.Text = "NEW";
+            // 
+            // eDITToolStripMenuItem9
+            // 
+            this.eDITToolStripMenuItem9.Name = "eDITToolStripMenuItem9";
+            this.eDITToolStripMenuItem9.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem9.Text = "EDIT";
+            // 
+            // cLIMATEToolStripMenuItem
+            // 
+            this.cLIMATEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem11,
+            this.eDITToolStripMenuItem10});
+            this.cLIMATEToolStripMenuItem.Name = "cLIMATEToolStripMenuItem";
+            this.cLIMATEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cLIMATEToolStripMenuItem.Text = "CLIMATE";
+            // 
+            // nEWToolStripMenuItem11
+            // 
+            this.nEWToolStripMenuItem11.Name = "nEWToolStripMenuItem11";
+            this.nEWToolStripMenuItem11.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem11.Text = "NEW";
+            // 
+            // eDITToolStripMenuItem10
+            // 
+            this.eDITToolStripMenuItem10.Name = "eDITToolStripMenuItem10";
+            this.eDITToolStripMenuItem10.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem10.Text = "EDIT";
+            // 
+            // cOUNTRYToolStripMenuItem
+            // 
+            this.cOUNTRYToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem12,
+            this.eDITToolStripMenuItem11});
+            this.cOUNTRYToolStripMenuItem.Name = "cOUNTRYToolStripMenuItem";
+            this.cOUNTRYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cOUNTRYToolStripMenuItem.Text = "COUNTRY";
+            // 
+            // nEWToolStripMenuItem12
+            // 
+            this.nEWToolStripMenuItem12.Name = "nEWToolStripMenuItem12";
+            this.nEWToolStripMenuItem12.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem12.Text = "NEW";
+            // 
+            // eDITToolStripMenuItem11
+            // 
+            this.eDITToolStripMenuItem11.Name = "eDITToolStripMenuItem11";
+            this.eDITToolStripMenuItem11.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem11.Text = "EDIT";
+            // 
+            // rOUTEToolStripMenuItem
+            // 
+            this.rOUTEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem13,
+            this.eDITToolStripMenuItem12});
+            this.rOUTEToolStripMenuItem.Name = "rOUTEToolStripMenuItem";
+            this.rOUTEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rOUTEToolStripMenuItem.Text = "ROUTE";
+            // 
+            // nEWToolStripMenuItem13
+            // 
+            this.nEWToolStripMenuItem13.Name = "nEWToolStripMenuItem13";
+            this.nEWToolStripMenuItem13.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem13.Text = "NEW";
+            // 
+            // eDITToolStripMenuItem12
+            // 
+            this.eDITToolStripMenuItem12.Name = "eDITToolStripMenuItem12";
+            this.eDITToolStripMenuItem12.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem12.Text = "EDIT";
+            // 
+            // vOUCHERToolStripMenuItem
+            // 
+            this.vOUCHERToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem14,
+            this.eDITToolStripMenuItem13});
+            this.vOUCHERToolStripMenuItem.Name = "vOUCHERToolStripMenuItem";
+            this.vOUCHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vOUCHERToolStripMenuItem.Text = "VOUCHER";
+            // 
+            // nEWToolStripMenuItem14
+            // 
+            this.nEWToolStripMenuItem14.Name = "nEWToolStripMenuItem14";
+            this.nEWToolStripMenuItem14.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem14.Text = "NEW";
+            // 
+            // eDITToolStripMenuItem13
+            // 
+            this.eDITToolStripMenuItem13.Name = "eDITToolStripMenuItem13";
+            this.eDITToolStripMenuItem13.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem13.Text = "EDIT";
             // 
             // WindowContracts
             // 
@@ -340,5 +493,23 @@
         private System.Windows.Forms.ToolStripMenuItem fOODTYPEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem hOTELToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem cITYToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem cLIMATEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem cOUNTRYToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem rOUTEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem vOUCHERToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem13;
     }
 }

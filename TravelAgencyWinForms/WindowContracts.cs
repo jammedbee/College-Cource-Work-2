@@ -63,7 +63,24 @@ namespace TravelAgencyWinForms
 
         private void eDITToolStripMenuItem7_Click(object sender, EventArgs e)
         {
-            (new WindowFoodTypeActions(ActiveConnection, 10, "Тест", "Тест", "Тест", "Описание")).ShowDialog(this);
+            (new WindowFoodTypeActions(ActiveConnection, 7, "Тест", "Тест", "Тест", "Описание")).ShowDialog(this);
+        }
+
+        private void nEWToolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            (new WindowHotelActions(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            SqlCommand cn = new SqlCommand("SELECT HotelImage FROM [Hotel] WHERE (HotelID = 5)", ActiveConnection);
+            
+            (new WindowHotelActions(ActiveConnection, 5, "aaaaa", "bbbbb", 5, (decimal)10.01, 6, (byte[])cn.ExecuteScalar())).ShowDialog(this);
+        }
+
+        private void hOTELToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowHotels(ActiveConnection)).Show();
         }
     }
 }
