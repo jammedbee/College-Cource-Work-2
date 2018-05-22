@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBCEB2C0-FFEF-4487-BDCE-69A8793E89B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TravelAgencyWinForms</RootNamespace>
+    <AssemblyName>TravelAgencyWinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WindowContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowContracts.Designer.cs">
+      <DependentUpon>WindowContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowEmployeeActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowEmployeeActions.Designer.cs">
+      <DependentUpon>WindowEmployeeActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowEmployees.Designer.cs">
+      <DependentUpon>WindowEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFoodTypeActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowFoodTypeActions.Designer.cs">
+      <DependentUpon>WindowFoodTypeActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowHotelActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowHotelActions.Designer.cs">
+      <DependentUpon>WindowHotelActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowLogin.Designer.cs">
+      <DependentUpon>WindowLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowLoginActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowLoginActions.Designer.cs">
+      <DependentUpon>WindowLoginActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPositionActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowPositionActions.Designer.cs">
+      <DependentUpon>WindowPositionActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowPositions.Designer.cs">
+      <DependentUpon>WindowPositions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WindowContracts.resx">
+      <DependentUpon>WindowContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowEmployeeActions.resx">
+      <DependentUpon>WindowEmployeeActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowEmployees.resx">
+      <DependentUpon>WindowEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFoodTypeActions.resx">
+      <DependentUpon>WindowFoodTypeActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowHotelActions.resx">
+      <DependentUpon>WindowHotelActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowLogin.resx">
+      <DependentUpon>WindowLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WindowLoginActions.resx">
+      <DependentUpon>WindowLoginActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowPositionActions.resx">
+      <DependentUpon>WindowPositionActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowPositions.resx">
+      <DependentUpon>WindowPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
