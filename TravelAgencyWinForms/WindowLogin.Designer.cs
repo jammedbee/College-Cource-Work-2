@@ -63,6 +63,7 @@
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Выход";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // textBoxLogin
             // 

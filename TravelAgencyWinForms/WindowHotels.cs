@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +58,8 @@ namespace TravelAgencyWinForms
                 Convert.ToInt32(dataGridViewHotels.CurrentRow.Cells[2].Value),
                 Convert.ToDecimal(dataGridViewHotels.CurrentRow.Cells[4].Value),
                 Convert.ToInt32(dataGridViewHotels.CurrentRow.Cells[5].Value),
-                (byte[])sqlCommand.ExecuteScalar())
+                (byte[])sqlCommand.ExecuteScalar(),
+                Convert.ToInt32(dataGridViewHotels.CurrentRow.Cells[7].Value))
             ).ShowDialog(this);
             FillDataGrid();
             sqlCommand.Dispose();
@@ -84,6 +86,14 @@ namespace TravelAgencyWinForms
                     MessageBox.Show("Призошла ошибка при удалении.", "Ошибка", MessageBoxButtons.OK);
                 }
             }
+        }
+
+        private void dataGridViewHotels_SelectionChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

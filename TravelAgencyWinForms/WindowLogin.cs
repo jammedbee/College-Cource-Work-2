@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Security;
 
 namespace TravelAgencyWinForms
 {
@@ -63,12 +64,24 @@ namespace TravelAgencyWinForms
                     }
                 }
             }
+            bytePassword = null;
+            password = null;
+            Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var contractsForm = new WindowContracts(ActiveConnection);
             contractsForm.Show();
+            Dispose();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            ActiveConnection.Close();
+            ActiveConnection.Dispose();
+            Dispose();
+            Application.Exit();
         }
     }
 }

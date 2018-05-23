@@ -58,7 +58,7 @@ namespace TravelAgencyWinForms
             {
                 CommandText = $"EXEC NewEmployee N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', " +
                 $"N'{textBoxMiddleName.Text}', N'{textBoxPhoneNumber.Text}', N'{textBoxEmail.Text}', " +
-                $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedIndex}, '{Login}'",
+                $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedValue}, '{Login}'",
                 Connection = ActiveConnection
             };
 
@@ -79,7 +79,7 @@ namespace TravelAgencyWinForms
             {
                 CommandText = $"EXEC UpdateEmployee {EmployeeID}, N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', " +
                 $"N'{textBoxMiddleName.Text}', N'{textBoxPhoneNumber.Text}', N'{textBoxEmail.Text}', " +
-                $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedIndex}",
+                $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedValue}",
                 Connection = ActiveConnection
             };
 
@@ -104,7 +104,7 @@ namespace TravelAgencyWinForms
             comboBoxPositionID.DataSource = dataSet.Tables[0];
             comboBoxPositionID.ValueMember = "#";
             comboBoxPositionID.DisplayMember = "Название";
-            comboBoxPositionID.SelectedIndex = EmployeePositionID;
+            comboBoxPositionID.SelectedValue = EmployeePositionID;
         }
     }
 }

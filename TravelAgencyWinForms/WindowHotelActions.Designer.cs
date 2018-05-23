@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxCity = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNightCost)).BeginInit();
@@ -200,11 +202,30 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Тип питания";
             // 
+            // comboBoxCity
+            // 
+            this.comboBoxCity.FormattingEnabled = true;
+            this.comboBoxCity.Location = new System.Drawing.Point(46, 222);
+            this.comboBoxCity.Name = "comboBoxCity";
+            this.comboBoxCity.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCity.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Город";
+            // 
             // WindowHotelActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 382);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxCity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -248,5 +269,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxCity;
+        private System.Windows.Forms.Label label6;
     }
 }

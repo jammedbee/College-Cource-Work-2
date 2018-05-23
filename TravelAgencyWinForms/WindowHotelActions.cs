@@ -36,6 +36,8 @@ namespace TravelAgencyWinForms
 
         private int HotelID { get; set; }
 
+        private int CityID { get; set; }
+
         public WindowHotelActions(SqlConnection connection)
         {
             InitializeComponent();
@@ -49,11 +51,13 @@ namespace TravelAgencyWinForms
             int hotelRating,
             decimal hotelNightCost,
             int hotelFoodType,
-            byte[] hotelPhoto)
+            byte[] hotelPhoto,
+            int cityID)
         {
             InitializeComponent();
             ActiveConnection = connection;
             HotelID = hotelID;
+            CityID = cityID;
             Del del = () =>
             {
                 textBoxName.Text = hotelName;
@@ -84,6 +88,13 @@ namespace TravelAgencyWinForms
             comboBoxFoodType.DisplayMember = "Название";
             comboBoxFoodType.SelectedIndex = HotelID;
 
+            sqlCommand.CommandText = "EXEC AllCities";
+            DataSet dataSet1 = new DataSet();
+            sqlDataAdapter.Fill(dataSet1);
+            comboBoxCity.DataSource = dataSet1.Tables[0];
+            comboBoxCity.ValueMember = "#";
+            comboBoxCity.DisplayMember = "Название";
+            comboBoxCity.SelectedIndex = CityID;
         }
 
         private void buttonUploadImage_Click(object sender, EventArgs e)
@@ -115,6 +126,7 @@ namespace TravelAgencyWinForms
             sqlCommand.Parameters.Add("@hotelNightCost", SqlDbType.Money);
             sqlCommand.Parameters.Add("@hotelFoodTypeID", SqlDbType.Int);
             sqlCommand.Parameters.Add("@hotelPhoto", SqlDbType.VarBinary);
+            sqlCommand.Parameters.Add("@hotelCityID", SqlDbType.Int);
 
             sqlCommand.Parameters["@hotelName"].Value = textBoxName.Text;
             sqlCommand.Parameters["@hotelAddress"].Value = textBoxAddress.Text;
@@ -122,6 +134,7 @@ namespace TravelAgencyWinForms
             sqlCommand.Parameters["@hotelNightCost"].Value = numericUpDownNightCost.Value;
             sqlCommand.Parameters["@hotelFoodTypeID"].Value = comboBoxFoodType.SelectedIndex;
             sqlCommand.Parameters["@hotelPhoto"].Value = image;
+            sqlCommand.Parameters["@hotelCityID"].Value = comboBoxCity.SelectedIndex; 
 
             if (sqlCommand.ExecuteNonQuery() > 0)
             {
@@ -157,6 +170,7 @@ namespace TravelAgencyWinForms
             sqlCommand.Parameters.Add("@hotelNightCost", SqlDbType.Money);
             sqlCommand.Parameters.Add("@hotelFoodTypeID", SqlDbType.Int);
             sqlCommand.Parameters.Add("@hotelPhoto", SqlDbType.VarBinary);
+            sqlCommand.Parameters.Add("@hotelCityID", SqlDbType.Int);
 
             sqlCommand.Parameters["@hotelID"].Value = HotelID;
             sqlCommand.Parameters["@hotelName"].Value = textBoxName.Text;
@@ -165,6 +179,7 @@ namespace TravelAgencyWinForms
             sqlCommand.Parameters["@hotelNightCost"].Value = numericUpDownNightCost.Value;
             sqlCommand.Parameters["@hotelFoodTypeID"].Value = comboBoxFoodType.SelectedIndex;
             sqlCommand.Parameters["@hotelPhoto"].Value = image;
+            sqlCommand.Parameters["@hotelCityID"].Value = comboBoxCity.SelectedIndex;
 
             if (sqlCommand.ExecuteNonQuery() > 0)
             {

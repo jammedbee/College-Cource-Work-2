@@ -45,11 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WindowCityActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowCityActions.Designer.cs">
+      <DependentUpon>WindowCityActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowClimateActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowClimateActions.Designer.cs">
+      <DependentUpon>WindowClimateActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowContracts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WindowContracts.Designer.cs">
       <DependentUpon>WindowContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowCountryActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowCountryActions.Designer.cs">
+      <DependentUpon>WindowCountryActions.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowEmployeeActions.cs">
       <SubType>Form</SubType>
@@ -107,8 +125,35 @@
     <Compile Include="WindowPositions.Designer.cs">
       <DependentUpon>WindowPositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowRouteActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowRouteActions.Designer.cs">
+      <DependentUpon>WindowRouteActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowVoucherActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowVoucherActions.Designer.cs">
+      <DependentUpon>WindowVoucherActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowVouchers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowVouchers.Designer.cs">
+      <DependentUpon>WindowVouchers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WindowCityActions.resx">
+      <DependentUpon>WindowCityActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowClimateActions.resx">
+      <DependentUpon>WindowClimateActions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowContracts.resx">
       <DependentUpon>WindowContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowCountryActions.resx">
+      <DependentUpon>WindowCountryActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowEmployeeActions.resx">
       <DependentUpon>WindowEmployeeActions.cs</DependentUpon>
@@ -145,6 +190,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowPositions.resx">
       <DependentUpon>WindowPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowRouteActions.resx">
+      <DependentUpon>WindowRouteActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowVoucherActions.resx">
+      <DependentUpon>WindowVoucherActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowVouchers.resx">
+      <DependentUpon>WindowVouchers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

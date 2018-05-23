@@ -329,14 +329,14 @@
             // nEWToolStripMenuItem9
             // 
             this.nEWToolStripMenuItem9.Name = "nEWToolStripMenuItem9";
-            this.nEWToolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
+            this.nEWToolStripMenuItem9.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem9.Text = "NEW";
             this.nEWToolStripMenuItem9.Click += new System.EventHandler(this.nEWToolStripMenuItem9_Click);
             // 
             // eDITToolStripMenuItem8
             // 
             this.eDITToolStripMenuItem8.Name = "eDITToolStripMenuItem8";
-            this.eDITToolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.eDITToolStripMenuItem8.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem8.Text = "EDIT";
             this.eDITToolStripMenuItem8.Click += new System.EventHandler(this.eDITToolStripMenuItem8_Click);
             // 
@@ -354,12 +354,14 @@
             this.nEWToolStripMenuItem10.Name = "nEWToolStripMenuItem10";
             this.nEWToolStripMenuItem10.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem10.Text = "NEW";
+            this.nEWToolStripMenuItem10.Click += new System.EventHandler(this.nEWToolStripMenuItem10_Click);
             // 
             // eDITToolStripMenuItem9
             // 
             this.eDITToolStripMenuItem9.Name = "eDITToolStripMenuItem9";
             this.eDITToolStripMenuItem9.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem9.Text = "EDIT";
+            this.eDITToolStripMenuItem9.Click += new System.EventHandler(this.eDITToolStripMenuItem9_Click);
             // 
             // cLIMATEToolStripMenuItem
             // 
@@ -375,12 +377,14 @@
             this.nEWToolStripMenuItem11.Name = "nEWToolStripMenuItem11";
             this.nEWToolStripMenuItem11.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem11.Text = "NEW";
+            this.nEWToolStripMenuItem11.Click += new System.EventHandler(this.nEWToolStripMenuItem11_Click);
             // 
             // eDITToolStripMenuItem10
             // 
             this.eDITToolStripMenuItem10.Name = "eDITToolStripMenuItem10";
             this.eDITToolStripMenuItem10.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem10.Text = "EDIT";
+            this.eDITToolStripMenuItem10.Click += new System.EventHandler(this.eDITToolStripMenuItem10_Click);
             // 
             // cOUNTRYToolStripMenuItem
             // 
@@ -396,12 +400,14 @@
             this.nEWToolStripMenuItem12.Name = "nEWToolStripMenuItem12";
             this.nEWToolStripMenuItem12.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem12.Text = "NEW";
+            this.nEWToolStripMenuItem12.Click += new System.EventHandler(this.nEWToolStripMenuItem12_Click);
             // 
             // eDITToolStripMenuItem11
             // 
             this.eDITToolStripMenuItem11.Name = "eDITToolStripMenuItem11";
             this.eDITToolStripMenuItem11.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem11.Text = "EDIT";
+            this.eDITToolStripMenuItem11.Click += new System.EventHandler(this.eDITToolStripMenuItem11_Click);
             // 
             // rOUTEToolStripMenuItem
             // 
@@ -417,12 +423,14 @@
             this.nEWToolStripMenuItem13.Name = "nEWToolStripMenuItem13";
             this.nEWToolStripMenuItem13.Size = new System.Drawing.Size(100, 22);
             this.nEWToolStripMenuItem13.Text = "NEW";
+            this.nEWToolStripMenuItem13.Click += new System.EventHandler(this.nEWToolStripMenuItem13_Click);
             // 
             // eDITToolStripMenuItem12
             // 
             this.eDITToolStripMenuItem12.Name = "eDITToolStripMenuItem12";
             this.eDITToolStripMenuItem12.Size = new System.Drawing.Size(100, 22);
             this.eDITToolStripMenuItem12.Text = "EDIT";
+            this.eDITToolStripMenuItem12.Click += new System.EventHandler(this.eDITToolStripMenuItem12_Click);
             // 
             // vOUCHERToolStripMenuItem
             // 
@@ -432,18 +440,21 @@
             this.vOUCHERToolStripMenuItem.Name = "vOUCHERToolStripMenuItem";
             this.vOUCHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vOUCHERToolStripMenuItem.Text = "VOUCHER";
+            this.vOUCHERToolStripMenuItem.Click += new System.EventHandler(this.vOUCHERToolStripMenuItem_Click);
             // 
             // nEWToolStripMenuItem14
             // 
             this.nEWToolStripMenuItem14.Name = "nEWToolStripMenuItem14";
-            this.nEWToolStripMenuItem14.Size = new System.Drawing.Size(100, 22);
+            this.nEWToolStripMenuItem14.Size = new System.Drawing.Size(180, 22);
             this.nEWToolStripMenuItem14.Text = "NEW";
+            this.nEWToolStripMenuItem14.Click += new System.EventHandler(this.nEWToolStripMenuItem14_Click);
             // 
             // eDITToolStripMenuItem13
             // 
             this.eDITToolStripMenuItem13.Name = "eDITToolStripMenuItem13";
-            this.eDITToolStripMenuItem13.Size = new System.Drawing.Size(100, 22);
+            this.eDITToolStripMenuItem13.Size = new System.Drawing.Size(180, 22);
             this.eDITToolStripMenuItem13.Text = "EDIT";
+            this.eDITToolStripMenuItem13.Click += new System.EventHandler(this.eDITToolStripMenuItem13_Click);
             // 
             // WindowContracts
             // 
@@ -454,6 +465,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WindowContracts";
             this.Text = "WindowContracts";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WindowContracts_FormClosing);
+            this.Load += new System.EventHandler(this.WindowContracts_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

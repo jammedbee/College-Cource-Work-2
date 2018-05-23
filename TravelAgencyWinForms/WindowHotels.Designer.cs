@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridViewHotels = new System.Windows.Forms.DataGridView();
-            this.pictureBoxHotelPhoto = new System.Windows.Forms.PictureBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHotels)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHotelPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewHotels
@@ -48,18 +46,11 @@
             this.dataGridViewHotels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHotels.Size = new System.Drawing.Size(564, 243);
             this.dataGridViewHotels.TabIndex = 0;
-            // 
-            // pictureBoxHotelPhoto
-            // 
-            this.pictureBoxHotelPhoto.Location = new System.Drawing.Point(582, 12);
-            this.pictureBoxHotelPhoto.Name = "pictureBoxHotelPhoto";
-            this.pictureBoxHotelPhoto.Size = new System.Drawing.Size(206, 183);
-            this.pictureBoxHotelPhoto.TabIndex = 1;
-            this.pictureBoxHotelPhoto.TabStop = false;
+            this.dataGridViewHotels.SelectionChanged += new System.EventHandler(this.dataGridViewHotels_SelectionChanged);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(526, 312);
+            this.buttonAdd.Location = new System.Drawing.Point(314, 274);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 2;
@@ -69,7 +60,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(607, 312);
+            this.buttonEdit.Location = new System.Drawing.Point(395, 274);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 3;
@@ -79,7 +70,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(713, 312);
+            this.buttonDelete.Location = new System.Drawing.Point(501, 274);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 4;
@@ -91,17 +82,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(588, 321);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.pictureBoxHotelPhoto);
             this.Controls.Add(this.dataGridViewHotels);
             this.Name = "WindowHotels";
             this.Text = "WindowHotels";
             this.Load += new System.EventHandler(this.WindowHotels_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHotels)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHotelPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,7 +98,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewHotels;
-        private System.Windows.Forms.PictureBox pictureBoxHotelPhoto;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;

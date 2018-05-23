@@ -16,7 +16,9 @@ namespace TravelAgencyWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WindowLogin());
+            WindowLogin windowLogin = new WindowLogin();
+            windowLogin.Show();
+            Application.Run();
         }
     }
 }
