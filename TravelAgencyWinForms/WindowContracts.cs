@@ -15,10 +15,13 @@ namespace TravelAgencyWinForms
     {
         private SqlConnection ActiveConnection { get; set; }
 
-        public WindowContracts(SqlConnection connection)
+        private int EmployeeID { get; set; }
+
+        public WindowContracts(SqlConnection connection, int employeeID)
         {
             InitializeComponent();
             ActiveConnection = connection;
+            EmployeeID = employeeID;
         }
 
         private void POSITIONToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,7 +118,20 @@ namespace TravelAgencyWinForms
 
         private void WindowContracts_Load(object sender, EventArgs e)
         {
+            DataSet dataSet = new DataSet();
 
+            using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("EXEC AllContracts", ActiveConnection))
+            {
+                sqlDataAdapter.Fill(dataSet.Tables.Add());
+                sqlDataAdapter.SelectCommand = new SqlCommand("EXEC AllVouchers", ActiveConnection);
+                sqlDataAdapter.Fill(dataSet.Tables.Add());
+                sqlDataAdapter.SelectCommand = new SqlCommand("EXEC AllClients", ActiveConnection);
+                sqlDataAdapter.Fill(dataSet.Tables.Add());
+            }
+
+            dataGridViewContracts.DataSource = dataSet.Tables[0];
+            dataGridView1.DataSource = dataSet.Tables[1];
+            dataGridView2.DataSource = dataSet.Tables[2];
         }
 
         private void WindowContracts_FormClosing(object sender, FormClosingEventArgs e)
@@ -146,6 +162,123 @@ namespace TravelAgencyWinForms
         private void vOUCHERToolStripMenuItem_Click(object sender, EventArgs e)
         {
             (new WindowVouchers(ActiveConnection)).Show();
+        }
+
+        private void nEWToolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            (new WindowSexActions(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            (new WindowSexActions(ActiveConnection, 3, "тест", "Т")).ShowDialog(this);
+        }
+
+        private void nEWToolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            (new WindowPassportTypeActions(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            (new WindowPassportTypeActions(ActiveConnection, 3, "asd")).ShowDialog(this);
+        }
+
+        private void nEWToolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            (new WindowAuthorityCountry(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            (new WindowAuthorityCountry(ActiveConnection, 4, "tes", "test")).ShowDialog(this);
+        }
+
+        private void nEWToolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+            (new WindowPassportActions(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            (new WindowPassportActions(ActiveConnection, "00000000", "TEST", "01/02/2018", "01/02/2028", 2, 1)).ShowDialog(this);
+        }
+
+        private void nEWToolStripMenuItem19_Click(object sender, EventArgs e)
+        {
+            (new WindowClientActions(ActiveConnection)).ShowDialog(this);
+        }
+
+        private void eDITToolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+            (new WindowClientActions(ActiveConnection, "00000003", 10, "aa", "sdafda", "sadsa",
+                1, "01/01/2018", "+0(000)000-00-00", "aa@aa.com")).ShowDialog(this);
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand = new SqlCommand();
+
+            sqlCommand.CommandText = $"SELECT VoucherDepartDate, VoucherPrice, HotelName, RouteTimeLength, CountryName " +
+                $"FROM Voucher JOIN Hotel ON VoucherHotelID = HotelID " +
+                $"JOIN Route ON VoucherRouteID = RouteID JOIN Country ON RouteCountryID = CountryID " +
+                $"WHERE(VoucherID = {(int)dataGridView1.CurrentRow.Cells[0].Value})";
+            sqlCommand.Connection = ActiveConnection;
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            if (sqlDataReader.HasRows)
+            {
+                sqlDataReader.Read();
+
+                label1.Text = "Дата отправления: " + Convert.ToString(sqlDataReader[0]);
+                label2.Text = "Цена: " + Convert.ToString(sqlDataReader[1]);
+                label3.Text = "Отель: " + Convert.ToString(sqlDataReader[2]);
+                label4.Text = "Длительность маршрута: " + Convert.ToString(sqlDataReader[3]);
+                label5.Text = "Страна назначения: " + Convert.ToString(sqlDataReader[4]);
+            }
+
+            sqlDataReader.Close();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            using (SqlCommand sqlCommand = new SqlCommand())
+            {
+                sqlCommand.CommandText = $"EXEC NewContract '{dateTimePicker1.Value.ToString()}'," +
+                    $"{(decimal)dataGridView1.CurrentRow.Cells[4].Value}, {EmployeeID}," +
+                    $"{(int)dataGridView2.CurrentRow.Cells[0].Value}, {(int)dataGridView1.CurrentRow.Cells[0].Value}";
+                sqlCommand.Connection = ActiveConnection;
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void маршрутыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowRoutes(ActiveConnection)).Show(this);
+        }
+
+        private void путёвкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowVouchers(ActiveConnection)).Show(this);
+        }
+
+        private void клиентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

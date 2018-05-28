@@ -112,9 +112,12 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "WindowLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WindowLogin_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

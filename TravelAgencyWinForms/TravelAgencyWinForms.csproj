@@ -45,11 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WindowAuthorityCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowAuthorityCountry.Designer.cs">
+      <DependentUpon>WindowAuthorityCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowCityActions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WindowCityActions.Designer.cs">
       <DependentUpon>WindowCityActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowClientActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowClientActions.Designer.cs">
+      <DependentUpon>WindowClientActions.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowClimateActions.cs">
       <SubType>Form</SubType>
@@ -113,6 +125,18 @@
     <Compile Include="WindowLoginActions.Designer.cs">
       <DependentUpon>WindowLoginActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowPassportActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowPassportActions.Designer.cs">
+      <DependentUpon>WindowPassportActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPassportTypeActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowPassportTypeActions.Designer.cs">
+      <DependentUpon>WindowPassportTypeActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowPositionActions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +155,18 @@
     <Compile Include="WindowRouteActions.Designer.cs">
       <DependentUpon>WindowRouteActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowRoutes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowRoutes.Designer.cs">
+      <DependentUpon>WindowRoutes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowSexActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowSexActions.Designer.cs">
+      <DependentUpon>WindowSexActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowVoucherActions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +179,14 @@
     <Compile Include="WindowVouchers.Designer.cs">
       <DependentUpon>WindowVouchers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowAuthorityCountry.resx">
+      <DependentUpon>WindowAuthorityCountry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowCityActions.resx">
       <DependentUpon>WindowCityActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowClientActions.resx">
+      <DependentUpon>WindowClientActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowClimateActions.resx">
       <DependentUpon>WindowClimateActions.cs</DependentUpon>
@@ -185,6 +227,12 @@
     <EmbeddedResource Include="WindowLoginActions.resx">
       <DependentUpon>WindowLoginActions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WindowPassportActions.resx">
+      <DependentUpon>WindowPassportActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowPassportTypeActions.resx">
+      <DependentUpon>WindowPassportTypeActions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowPositionActions.resx">
       <DependentUpon>WindowPositionActions.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowRouteActions.resx">
       <DependentUpon>WindowRouteActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowRoutes.resx">
+      <DependentUpon>WindowRoutes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowSexActions.resx">
+      <DependentUpon>WindowSexActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowVoucherActions.resx">
       <DependentUpon>WindowVoucherActions.cs</DependentUpon>

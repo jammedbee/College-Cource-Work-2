@@ -50,7 +50,15 @@ namespace TravelAgencyWinForms
 
             if ((bool)sqlCommand.ExecuteScalar())
             {
-                var contractsForm = new WindowContracts(ActiveConnection);
+                int emp;
+
+                using (SqlCommand command = new SqlCommand(
+                    $"SELECT EmployeeID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')", ActiveConnection))
+                {
+                    emp = (int)command.ExecuteScalar();
+                }
+
+                var contractsForm = new WindowContracts(ActiveConnection, emp);
                 contractsForm.Show();
             }
             else
@@ -71,7 +79,7 @@ namespace TravelAgencyWinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var contractsForm = new WindowContracts(ActiveConnection);
+            var contractsForm = new WindowContracts(ActiveConnection, 1);
             contractsForm.Show();
             Dispose();
         }
@@ -82,6 +90,15 @@ namespace TravelAgencyWinForms
             ActiveConnection.Dispose();
             Dispose();
             Application.Exit();
+        }
+
+        private void WindowLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                ActiveConnection.Close();
+                Application.Exit();
+            }
         }
     }
 }
