@@ -31,6 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.спискиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.путёвкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.маршрутыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отелиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dEVELOPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOSITIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,10 +107,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.путёвкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.маршрутыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отелиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
@@ -144,6 +144,33 @@
             this.спискиToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.спискиToolStripMenuItem.Text = "Списки";
             // 
+            // клиентыToolStripMenuItem
+            // 
+            this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
+            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.клиентыToolStripMenuItem.Text = "Клиенты";
+            this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
+            // 
+            // путёвкиToolStripMenuItem
+            // 
+            this.путёвкиToolStripMenuItem.Name = "путёвкиToolStripMenuItem";
+            this.путёвкиToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.путёвкиToolStripMenuItem.Text = "Путёвки";
+            this.путёвкиToolStripMenuItem.Click += new System.EventHandler(this.путёвкиToolStripMenuItem_Click);
+            // 
+            // маршрутыToolStripMenuItem
+            // 
+            this.маршрутыToolStripMenuItem.Name = "маршрутыToolStripMenuItem";
+            this.маршрутыToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.маршрутыToolStripMenuItem.Text = "Маршруты";
+            this.маршрутыToolStripMenuItem.Click += new System.EventHandler(this.маршрутыToolStripMenuItem_Click);
+            // 
+            // отелиToolStripMenuItem
+            // 
+            this.отелиToolStripMenuItem.Name = "отелиToolStripMenuItem";
+            this.отелиToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.отелиToolStripMenuItem.Text = "Отели";
+            // 
             // dEVELOPToolStripMenuItem
             // 
             this.dEVELOPToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -177,7 +204,7 @@
             this.nEWToolStripMenuItem,
             this.eDITToolStripMenuItem});
             this.pOSITIONToolStripMenuItem.Name = "pOSITIONToolStripMenuItem";
-            this.pOSITIONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pOSITIONToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.pOSITIONToolStripMenuItem.Text = "POSITION";
             this.pOSITIONToolStripMenuItem.Click += new System.EventHandler(this.POSITIONToolStripMenuItem_Click);
             // 
@@ -201,7 +228,7 @@
             this.nEWToolStripMenuItem1,
             this.eDITToolStripMenuItem1});
             this.eMPLOYEEToolStripMenuItem.Name = "eMPLOYEEToolStripMenuItem";
-            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.eMPLOYEEToolStripMenuItem.Text = "EMPLOYEE";
             this.eMPLOYEEToolStripMenuItem.Click += new System.EventHandler(this.eMPLOYEEToolStripMenuItem_Click);
             // 
@@ -225,7 +252,7 @@
             this.nEWToolStripMenuItem2,
             this.eDITToolStripMenuItem2});
             this.pASSPORTTYPEToolStripMenuItem.Name = "pASSPORTTYPEToolStripMenuItem";
-            this.pASSPORTTYPEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pASSPORTTYPEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.pASSPORTTYPEToolStripMenuItem.Text = "PASSPORT_TYPE";
             // 
             // nEWToolStripMenuItem2
@@ -246,7 +273,7 @@
             this.nEWToolStripMenuItem3,
             this.eDITToolStripMenuItem3});
             this.aUCOUNTRYToolStripMenuItem.Name = "aUCOUNTRYToolStripMenuItem";
-            this.aUCOUNTRYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aUCOUNTRYToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.aUCOUNTRYToolStripMenuItem.Text = "AU_COUNTRY";
             // 
             // nEWToolStripMenuItem3
@@ -267,7 +294,7 @@
             this.nEWToolStripMenuItem4,
             this.eDITToolStripMenuItem4});
             this.sEXToolStripMenuItem.Name = "sEXToolStripMenuItem";
-            this.sEXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sEXToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.sEXToolStripMenuItem.Text = "SEX";
             // 
             // nEWToolStripMenuItem4
@@ -288,7 +315,7 @@
             this.nEWToolStripMenuItem5,
             this.eDITToolStripMenuItem5});
             this.pASSPORTToolStripMenuItem.Name = "pASSPORTToolStripMenuItem";
-            this.pASSPORTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pASSPORTToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.pASSPORTToolStripMenuItem.Text = "PASSPORT";
             // 
             // nEWToolStripMenuItem5
@@ -309,7 +336,7 @@
             this.nEWToolStripMenuItem6,
             this.eDITToolStripMenuItem6});
             this.cLIENTToolStripMenuItem.Name = "cLIENTToolStripMenuItem";
-            this.cLIENTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cLIENTToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.cLIENTToolStripMenuItem.Text = "CLIENT";
             // 
             // nEWToolStripMenuItem6
@@ -329,7 +356,7 @@
             this.lOGINToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nEWToolStripMenuItem7});
             this.lOGINToolStripMenuItem.Name = "lOGINToolStripMenuItem";
-            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.lOGINToolStripMenuItem.Text = "LOGIN";
             // 
             // nEWToolStripMenuItem7
@@ -345,7 +372,7 @@
             this.nEWToolStripMenuItem8,
             this.eDITToolStripMenuItem7});
             this.fOODTYPEToolStripMenuItem.Name = "fOODTYPEToolStripMenuItem";
-            this.fOODTYPEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fOODTYPEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.fOODTYPEToolStripMenuItem.Text = "FOOD_TYPE";
             // 
             // nEWToolStripMenuItem8
@@ -368,7 +395,7 @@
             this.nEWToolStripMenuItem9,
             this.eDITToolStripMenuItem8});
             this.hOTELToolStripMenuItem.Name = "hOTELToolStripMenuItem";
-            this.hOTELToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hOTELToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.hOTELToolStripMenuItem.Text = "HOTEL";
             this.hOTELToolStripMenuItem.Click += new System.EventHandler(this.hOTELToolStripMenuItem_Click);
             // 
@@ -392,7 +419,7 @@
             this.nEWToolStripMenuItem10,
             this.eDITToolStripMenuItem9});
             this.cITYToolStripMenuItem.Name = "cITYToolStripMenuItem";
-            this.cITYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cITYToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.cITYToolStripMenuItem.Text = "CITY";
             // 
             // nEWToolStripMenuItem10
@@ -415,7 +442,7 @@
             this.nEWToolStripMenuItem11,
             this.eDITToolStripMenuItem10});
             this.cLIMATEToolStripMenuItem.Name = "cLIMATEToolStripMenuItem";
-            this.cLIMATEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cLIMATEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.cLIMATEToolStripMenuItem.Text = "CLIMATE";
             // 
             // nEWToolStripMenuItem11
@@ -438,7 +465,7 @@
             this.nEWToolStripMenuItem12,
             this.eDITToolStripMenuItem11});
             this.cOUNTRYToolStripMenuItem.Name = "cOUNTRYToolStripMenuItem";
-            this.cOUNTRYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cOUNTRYToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.cOUNTRYToolStripMenuItem.Text = "COUNTRY";
             // 
             // nEWToolStripMenuItem12
@@ -461,7 +488,7 @@
             this.nEWToolStripMenuItem13,
             this.eDITToolStripMenuItem12});
             this.rOUTEToolStripMenuItem.Name = "rOUTEToolStripMenuItem";
-            this.rOUTEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rOUTEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.rOUTEToolStripMenuItem.Text = "ROUTE";
             // 
             // nEWToolStripMenuItem13
@@ -484,7 +511,7 @@
             this.nEWToolStripMenuItem14,
             this.eDITToolStripMenuItem13});
             this.vOUCHERToolStripMenuItem.Name = "vOUCHERToolStripMenuItem";
-            this.vOUCHERToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vOUCHERToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.vOUCHERToolStripMenuItem.Text = "VOUCHER";
             this.vOUCHERToolStripMenuItem.Click += new System.EventHandler(this.vOUCHERToolStripMenuItem_Click);
             // 
@@ -508,7 +535,7 @@
             this.nEWToolStripMenuItem15,
             this.eDITToolStripMenuItem14});
             this.sEXToolStripMenuItem1.Name = "sEXToolStripMenuItem1";
-            this.sEXToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.sEXToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.sEXToolStripMenuItem1.Text = "SEX";
             // 
             // nEWToolStripMenuItem15
@@ -531,7 +558,7 @@
             this.nEWToolStripMenuItem16,
             this.eDITToolStripMenuItem15});
             this.pASSPOTTYPEToolStripMenuItem.Name = "pASSPOTTYPEToolStripMenuItem";
-            this.pASSPOTTYPEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pASSPOTTYPEToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.pASSPOTTYPEToolStripMenuItem.Text = "PASSPORT_TYPE";
             // 
             // nEWToolStripMenuItem16
@@ -554,7 +581,7 @@
             this.nEWToolStripMenuItem17,
             this.eDITToolStripMenuItem16});
             this.aUCOUNTRYToolStripMenuItem1.Name = "aUCOUNTRYToolStripMenuItem1";
-            this.aUCOUNTRYToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aUCOUNTRYToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.aUCOUNTRYToolStripMenuItem1.Text = "AU_COUNTRY";
             // 
             // nEWToolStripMenuItem17
@@ -577,7 +604,7 @@
             this.nEWToolStripMenuItem18,
             this.eDITToolStripMenuItem17});
             this.pASSPORTToolStripMenuItem1.Name = "pASSPORTToolStripMenuItem1";
-            this.pASSPORTToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pASSPORTToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.pASSPORTToolStripMenuItem1.Text = "PASSPORT";
             // 
             // nEWToolStripMenuItem18
@@ -600,7 +627,7 @@
             this.nEWToolStripMenuItem19,
             this.eDITToolStripMenuItem18});
             this.cLIENTToolStripMenuItem1.Name = "cLIENTToolStripMenuItem1";
-            this.cLIENTToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cLIENTToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.cLIENTToolStripMenuItem1.Text = "CLIENT";
             // 
             // nEWToolStripMenuItem19
@@ -621,6 +648,7 @@
             // 
             this.dataGridViewContracts.AllowUserToAddRows = false;
             this.dataGridViewContracts.AllowUserToDeleteRows = false;
+            this.dataGridViewContracts.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContracts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewContracts.Location = new System.Drawing.Point(0, 27);
@@ -653,6 +681,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(0, 411);
@@ -666,6 +695,7 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.Location = new System.Drawing.Point(0, 541);
@@ -739,33 +769,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // клиентыToolStripMenuItem
-            // 
-            this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
-            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.клиентыToolStripMenuItem.Text = "Клиенты";
-            this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
-            // 
-            // путёвкиToolStripMenuItem
-            // 
-            this.путёвкиToolStripMenuItem.Name = "путёвкиToolStripMenuItem";
-            this.путёвкиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.путёвкиToolStripMenuItem.Text = "Путёвки";
-            this.путёвкиToolStripMenuItem.Click += new System.EventHandler(this.путёвкиToolStripMenuItem_Click);
-            // 
-            // маршрутыToolStripMenuItem
-            // 
-            this.маршрутыToolStripMenuItem.Name = "маршрутыToolStripMenuItem";
-            this.маршрутыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.маршрутыToolStripMenuItem.Text = "Маршруты";
-            this.маршрутыToolStripMenuItem.Click += new System.EventHandler(this.маршрутыToolStripMenuItem_Click);
-            // 
-            // отелиToolStripMenuItem
-            // 
-            this.отелиToolStripMenuItem.Name = "отелиToolStripMenuItem";
-            this.отелиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.отелиToolStripMenuItem.Text = "Отели";
             // 
             // groupBox2
             // 
