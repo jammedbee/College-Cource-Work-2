@@ -31,6 +31,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowFoodTypeActions(SqlConnection connection, int typeID
@@ -49,6 +51,8 @@ namespace TravelAgencyWinForms
                 textBoxSymbolicName.Text = TypeSymbolicName; richTextBoxDescription.Text = TypeDescription;
             };
             del();
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

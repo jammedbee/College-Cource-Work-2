@@ -39,54 +39,64 @@
             // 
             this.dataGridViewRoutes.AllowUserToAddRows = false;
             this.dataGridViewRoutes.AllowUserToDeleteRows = false;
+            this.dataGridViewRoutes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewRoutes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRoutes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewRoutes.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewRoutes.Location = new System.Drawing.Point(14, 16);
+            this.dataGridViewRoutes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewRoutes.Name = "dataGridViewRoutes";
-            this.dataGridViewRoutes.Size = new System.Drawing.Size(630, 239);
+            this.dataGridViewRoutes.Size = new System.Drawing.Size(735, 313);
             this.dataGridViewRoutes.TabIndex = 0;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(405, 257);
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(631, 336);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(36, 30);
             this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "button1";
+            this.buttonAdd.Text = "";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(486, 257);
+            this.buttonEdit.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Location = new System.Drawing.Point(673, 336);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(36, 30);
             this.buttonEdit.TabIndex = 2;
-            this.buttonEdit.Text = "button2";
+            this.buttonEdit.Text = "";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(567, 257);
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(715, 336);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(36, 30);
             this.buttonDelete.TabIndex = 3;
-            this.buttonDelete.Text = "button3";
+            this.buttonDelete.Text = "";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // WindowRoutes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 319);
+            this.ClientSize = new System.Drawing.Size(763, 417);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridViewRoutes);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "WindowRoutes";
-            this.Text = "WindowRoutes";
+            this.Text = "Маршруты";
             this.Load += new System.EventHandler(this.WindowRoutes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoutes)).EndInit();
             this.ResumeLayout(false);

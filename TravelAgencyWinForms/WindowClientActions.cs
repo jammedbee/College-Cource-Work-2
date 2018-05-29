@@ -30,6 +30,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             GetDataFromServer();
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowClientActions(SqlConnection connection, string passportNumber,
@@ -48,7 +50,9 @@ namespace TravelAgencyWinForms
             dateTimePickerBirthDate.Value = Convert.ToDateTime(birthDate);
             comboBoxSex.SelectedValue = sexID;
             textBoxEmail.Text = email;
-            textBoxPhone.Text = phone;
+            maskedTextBoxPhone.Text = phone;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void GetDataFromServer()
@@ -80,7 +84,7 @@ namespace TravelAgencyWinForms
             using (SqlCommand sqlCommand = new SqlCommand(
                 $"EXEC NewClient N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}'," +
                 $"N'{textBoxMiddleName.Text}', '{dateTimePickerBirthDate.Value.ToShortDateString()}'," +
-                $" '{textBoxPhone.Text}', N'{textBoxEmail.Text}', " +
+                $" '{maskedTextBoxPhone.Text}', N'{textBoxEmail.Text}', " +
                 $"{comboBoxSex.SelectedValue}, N'{textBoxPassportNumber.Text}'", ActiveConnection))
             {
                 if (sqlCommand.ExecuteNonQuery() > 0)
@@ -145,7 +149,7 @@ namespace TravelAgencyWinForms
                 using (SqlCommand sqlCommand = new SqlCommand(
                     $"EXEC UpdateClient {ClientID}, N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}'," +
                     $"N'{textBoxMiddleName.Text}', '{dateTimePickerBirthDate.Value.ToShortDateString()}'," +
-                    $" '{textBoxPhone.Text}', N'{textBoxEmail.Text}', " +
+                    $" '{maskedTextBoxPhone.Text}', N'{textBoxEmail.Text}', " +
                     $"{comboBoxSex.SelectedValue}, N'{textBoxPassportNumber.Text}'", ActiveConnection))
                 {
                     if (sqlCommand.ExecuteNonQuery() > 0)

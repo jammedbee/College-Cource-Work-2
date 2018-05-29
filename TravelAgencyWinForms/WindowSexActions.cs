@@ -21,6 +21,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connecton;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowSexActions(SqlConnection connection, int sexID,
@@ -31,6 +33,8 @@ namespace TravelAgencyWinForms
             SexID = sexID;
             textBoxName.Text = sexName;
             textBoxCode.Text = sexCode;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

@@ -21,6 +21,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowAuthorityCountry(SqlConnection connection, int countryID,
@@ -31,6 +33,8 @@ namespace TravelAgencyWinForms
             CountryID = countryID;
             textBoxName.Text = countryName;
             textBoxISOCode.Text = countryISOCode;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

@@ -24,6 +24,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             GetDataFromServer();
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowCountryActions(SqlConnection connection, int countryID, string countryName, int countryClimate)
@@ -39,6 +41,8 @@ namespace TravelAgencyWinForms
                 comboBoxClimate.SelectedValue = countryClimate;
             };
             del();
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

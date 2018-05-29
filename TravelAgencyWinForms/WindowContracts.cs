@@ -24,6 +24,11 @@ namespace TravelAgencyWinForms
             EmployeeID = employeeID;
         }
 
+        public void SayHello(string employeeName)
+        {
+            label13.Text = employeeName;
+        }
+
         private void POSITIONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             (new WindowPositions(ActiveConnection)).Show();
@@ -248,21 +253,25 @@ namespace TravelAgencyWinForms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            using (SqlCommand sqlCommand = new SqlCommand())
+            if (MessageBox.Show("Вы уверены?", "Подтверждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                sqlCommand.CommandText = $"EXEC NewContract '{dateTimePicker1.Value.ToString()}'," +
-                    $"{(decimal)dataGridView1.CurrentRow.Cells[4].Value}, {EmployeeID}," +
-                    $"{(int)dataGridView2.CurrentRow.Cells[0].Value}, {(int)dataGridView1.CurrentRow.Cells[0].Value}";
-                sqlCommand.Connection = ActiveConnection;
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.CommandText = $"EXEC NewContract '{dateTimePicker1.Value.ToString()}'," +
+                        $"{(decimal)dataGridView1.CurrentRow.Cells[4].Value}, {EmployeeID}," +
+                        $"{(int)dataGridView2.CurrentRow.Cells[0].Value}, {(int)dataGridView1.CurrentRow.Cells[0].Value}";
+                    sqlCommand.Connection = ActiveConnection;
 
-                try
-                {
-                    sqlCommand.ExecuteNonQuery();
+                    try
+                    {
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                FillContracts();
             }
         }
 
@@ -281,9 +290,136 @@ namespace TravelAgencyWinForms
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(maskedTextBox1.Text);
+            if ((sender as DataGridView).CurrentRow != null)
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+
+                    sqlCommand.CommandText = $"SELECT ClientFirstName" +
+                            $",ClientLastName" +
+                            $",ClientMiddleName" +
+                            $",ClientDateOfBirth" +
+                            $",ClientPhone" +
+                            $",ClientEmail" +
+                            $",SexName" +
+                        $" FROM Client JOIN Sex ON ClientSexID = SexID " +
+                        $"WHERE(ClientID = {(int)dataGridView2.CurrentRow.Cells[0].Value})";
+                    sqlCommand.Connection = ActiveConnection;
+
+                    SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                    if (sqlDataReader.HasRows)
+                    {
+                        sqlDataReader.Read();
+
+                        label6.Text = "Имя: " + Convert.ToString(sqlDataReader[0]);
+                        label7.Text = "Фамилия: " + Convert.ToString(sqlDataReader[1]);
+                        label8.Text = "Отчество: " + Convert.ToString(sqlDataReader[2]);
+                        label9.Text = "Дата рождения: " + Convert.ToString(sqlDataReader[3]);
+                        label10.Text = "Телефон: " + Convert.ToString(sqlDataReader[4]);
+                        label11.Text = "Email: " + Convert.ToString(sqlDataReader[5]);
+                        label12.Text = "Пол: " + Convert.ToString(sqlDataReader[6]);
+                    }
+
+                    sqlDataReader.Close();
+                }
+        }
+
+        private void FillContracts()
+        {
+            DataSet dataSet = new DataSet();
+            using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("EXEC AllContracts", ActiveConnection))
+            {
+                sqlDataAdapter.Fill(dataSet.Tables.Add());
+            }
+           dataGridViewContracts.DataSource = dataSet.Tables[0];
+        }
+
+        private void dataGridViewContracts_SelectionChanged(object sender, EventArgs e)
+        {
+            if ((sender as DataGridView).CurrentRow != null)
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.CommandText = $"SELECT ClientFirstName" +
+                            $",ClientLastName" +
+                            $",ClientMiddleName" +
+                            $",ClientDateOfBirth" +
+                            $",ClientPhone" +
+                            $",ClientEmail" +
+                            $",SexName" +
+                        $" FROM Client JOIN Sex ON ClientSexID = SexID " +
+                        $"WHERE(ClientID = {(int)dataGridView2.CurrentRow.Cells[0].Value})";
+                    sqlCommand.Connection = ActiveConnection;
+
+                    SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                    if (sqlDataReader.HasRows)
+                    {
+                        sqlDataReader.Read();
+
+                        label6.Text = "Имя: " + Convert.ToString(sqlDataReader[0]);
+                        label7.Text = "Фамилия: " + Convert.ToString(sqlDataReader[1]);
+                        label8.Text = "Отчество: " + Convert.ToString(sqlDataReader[2]);
+                        label9.Text = "Дата рождения: " + Convert.ToString(sqlDataReader[3]);
+                        label10.Text = "Телефон: " + Convert.ToString(sqlDataReader[4]);
+                        label11.Text = "Email: " + Convert.ToString(sqlDataReader[5]);
+                        label12.Text = "Пол: " + Convert.ToString(sqlDataReader[6]);
+                    }
+
+                    sqlDataReader.Close();
+                }
+        }
+
+        private void dataGridViewContracts_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewContracts_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if ((sender as DataGridView).CurrentRow != null)
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.CommandText = $"SELECT " +
+                            $"ContractID AS '#'" +
+                            $",ContractDateOfIssue AS 'Дата оформления'" +
+                            $",EmployeeLastName + ' ' + EmployeeFirstName + ' ' + EmployeeMiddleName AS 'Сотрудник'" +
+                            $",ContractTotalPrice AS 'Общая стоимость'" +
+                            $",ClientLastName + ' ' + ClientFirstName + ' ' + ClientMiddleName AS 'Клиент'" +
+                            $",VoucherDepartDate AS 'Дата отправления'" +
+                            $",RouteTimeLength AS 'Длиительность (дни)'" +
+                            $",CountryName AS 'Страна назначения'" +
+                            $",CityName AS 'Город'" +
+                            $",HotelName + ', ' + HotelAddress AS 'Отель'" +
+                        $" FROM[Contract] " +
+                            $"JOIN Client ON ContractClientID = ClientID " +
+                            $"JOIN Employee ON ContractEmployeeID = EmployeeID " +
+                            $"JOIN Voucher ON ContractVoucherNumber = VoucherID " +
+                            $"JOIN[Route] ON VoucherRouteID = RouteID " +
+                            $"JOIN Hotel ON VoucherHotelID = HotelID " +
+                            $"JOIN Country ON RouteCountryID = CountryID " +
+                            $"JOIN City ON HotelCityID = CityID " +
+                        $"WHERE (ContractID = {(int)dataGridViewContracts.CurrentRow.Cells[0].Value})";
+                    sqlCommand.Connection = ActiveConnection;
+                    SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                    if (sqlDataReader.HasRows)
+                    {
+                        sqlDataReader.Read();
+                        label14.Text = "Номер контракта: " + Convert.ToString(sqlDataReader[0]);
+                        label15.Text = "Дата оформления: " + Convert.ToString(sqlDataReader[1]);
+                        label16.Text = "Оформил(а): " + Convert.ToString(sqlDataReader[2]);
+                        label17.Text = "Общая стоимость: " + Convert.ToString(sqlDataReader[3]);
+                        label18.Text = "Клиент: " + Convert.ToString(sqlDataReader[4]);
+                        label19.Text = "Дата отправления: " + Convert.ToString(sqlDataReader[5]);
+                        label20.Text = "Длительность: " + Convert.ToString(sqlDataReader[6]) + " дней";
+                        label21.Text = "Страна: " + Convert.ToString(sqlDataReader[7]);
+                        label22.Text = "Город: " + Convert.ToString(sqlDataReader[8]);
+                        label23.Text = "Отель: " + Convert.ToString(sqlDataReader[9]);
+                        sqlDataReader.Close();
+                    }
+                }
+
         }
     }
 }

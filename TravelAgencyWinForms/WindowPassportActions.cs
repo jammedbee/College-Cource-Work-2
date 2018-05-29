@@ -23,6 +23,8 @@ namespace TravelAgencyWinForms
             ActiveConnection = connection;
             GetDataFromServer(ActiveConnection);
             buttonEditNumber.Visible = false;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowPassportActions(SqlConnection connection, string passportNumber,
@@ -41,6 +43,8 @@ namespace TravelAgencyWinForms
             comboBoxAuthorityCountry.SelectedValue = authorityCountryID;
             comboBoxType.SelectedValue = typeID;
             buttonEditNumber.Visible = true;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

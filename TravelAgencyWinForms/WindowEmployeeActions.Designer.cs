@@ -34,7 +34,6 @@
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxMiddleName = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPaymentCardNumber = new System.Windows.Forms.TextBox();
             this.comboBoxPositionID = new System.Windows.Forms.ComboBox();
@@ -45,13 +44,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(15, 334);
+            this.buttonAdd.Location = new System.Drawing.Point(16, 408);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(240, 30);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "button1";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(15, 363);
+            this.buttonSave.Location = new System.Drawing.Point(16, 408);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(240, 30);
             this.buttonSave.TabIndex = 1;
             this.buttonSave.Text = "button2";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(15, 407);
+            this.buttonCancel.Location = new System.Drawing.Point(16, 446);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(240, 30);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "button3";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -79,122 +82,130 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(93, 41);
+            this.textBoxFirstName.Location = new System.Drawing.Point(112, 76);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(121, 20);
+            this.textBoxFirstName.Size = new System.Drawing.Size(140, 25);
             this.textBoxFirstName.TabIndex = 3;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(93, 83);
+            this.textBoxLastName.Location = new System.Drawing.Point(112, 109);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(121, 20);
+            this.textBoxLastName.Size = new System.Drawing.Size(140, 25);
             this.textBoxLastName.TabIndex = 4;
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.Location = new System.Drawing.Point(93, 129);
+            this.textBoxMiddleName.Location = new System.Drawing.Point(112, 142);
+            this.textBoxMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxMiddleName.Name = "textBoxMiddleName";
-            this.textBoxMiddleName.Size = new System.Drawing.Size(121, 20);
+            this.textBoxMiddleName.Size = new System.Drawing.Size(140, 25);
             this.textBoxMiddleName.TabIndex = 5;
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(93, 173);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(121, 20);
-            this.textBoxPhoneNumber.TabIndex = 6;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(93, 218);
+            this.textBoxEmail.Location = new System.Drawing.Point(112, 208);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(121, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(140, 25);
             this.textBoxEmail.TabIndex = 7;
             // 
             // textBoxPaymentCardNumber
             // 
-            this.textBoxPaymentCardNumber.Location = new System.Drawing.Point(93, 257);
+            this.textBoxPaymentCardNumber.Location = new System.Drawing.Point(112, 241);
+            this.textBoxPaymentCardNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPaymentCardNumber.Name = "textBoxPaymentCardNumber";
-            this.textBoxPaymentCardNumber.Size = new System.Drawing.Size(121, 20);
+            this.textBoxPaymentCardNumber.Size = new System.Drawing.Size(140, 25);
             this.textBoxPaymentCardNumber.TabIndex = 8;
             // 
             // comboBoxPositionID
             // 
             this.comboBoxPositionID.FormattingEnabled = true;
-            this.comboBoxPositionID.Location = new System.Drawing.Point(93, 287);
+            this.comboBoxPositionID.Location = new System.Drawing.Point(112, 274);
+            this.comboBoxPositionID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxPositionID.Name = "comboBoxPositionID";
-            this.comboBoxPositionID.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPositionID.Size = new System.Drawing.Size(140, 25);
             this.comboBoxPositionID.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 44);
+            this.label1.Location = new System.Drawing.Point(16, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Имя";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 86);
+            this.label2.Location = new System.Drawing.Point(13, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Фамилия";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 132);
+            this.label3.Location = new System.Drawing.Point(13, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Отчество";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 176);
+            this.label4.Location = new System.Drawing.Point(13, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Телефон";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 221);
+            this.label5.Location = new System.Drawing.Point(13, 211);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Эл. адрес";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 260);
+            this.label6.Location = new System.Drawing.Point(13, 244);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.Size = new System.Drawing.Size(88, 17);
             this.label6.TabIndex = 16;
             this.label6.Text = "Номер карты";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 290);
+            this.label7.Location = new System.Drawing.Point(13, 277);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.Size = new System.Drawing.Size(74, 17);
             this.label7.TabIndex = 17;
             this.label7.Text = "Должность";
             // 
+            // maskedTextBoxPhone
+            // 
+            this.maskedTextBoxPhone.Location = new System.Drawing.Point(112, 175);
+            this.maskedTextBoxPhone.Mask = "+0(000)000-00-00";
+            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
+            this.maskedTextBoxPhone.Size = new System.Drawing.Size(140, 25);
+            this.maskedTextBoxPhone.TabIndex = 18;
+            // 
             // WindowEmployeeActions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 451);
+            this.ClientSize = new System.Drawing.Size(264, 485);
+            this.Controls.Add(this.maskedTextBoxPhone);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -205,13 +216,14 @@
             this.Controls.Add(this.comboBoxPositionID);
             this.Controls.Add(this.textBoxPaymentCardNumber);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAdd);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "WindowEmployeeActions";
             this.Text = "WindowEmployeeActions";
             this.Load += new System.EventHandler(this.WindowEmployeeActions_Load);
@@ -228,7 +240,6 @@
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxMiddleName;
-        private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPaymentCardNumber;
         private System.Windows.Forms.ComboBox comboBoxPositionID;
@@ -239,5 +250,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPhone;
     }
 }

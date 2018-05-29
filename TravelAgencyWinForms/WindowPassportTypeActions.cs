@@ -21,6 +21,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowPassportTypeActions(SqlConnection connection, int passportTypeID,
@@ -30,6 +32,8 @@ namespace TravelAgencyWinForms
             ActiveConnection = connection;
             PassportTypeID = passportTypeID;
             textBoxName.Text = passportTypeName;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

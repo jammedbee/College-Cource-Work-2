@@ -21,6 +21,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowPositionActions(SqlConnection connection, string positionName, int overheadPercentage, int positionID)
@@ -30,6 +32,8 @@ namespace TravelAgencyWinForms
             textBoxPositionName.Text = positionName;
             numericUpDownPositionOverheadPercentage.Value = overheadPercentage;
             PositionID = positionID;
+            this.Text = "Изменить";
+            buttonAdd.Visible = false;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

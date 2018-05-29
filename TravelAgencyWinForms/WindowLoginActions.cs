@@ -20,6 +20,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowLoginActions(SqlConnection connection, string login)
@@ -28,6 +30,8 @@ namespace TravelAgencyWinForms
             ActiveConnection = connection;
             textBoxName.Text = login;
             textBoxName.ReadOnly = true;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -71,6 +75,11 @@ namespace TravelAgencyWinForms
         }
 
         private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
         {
 
         }

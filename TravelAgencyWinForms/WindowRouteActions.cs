@@ -24,6 +24,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             GetDataFromServer();
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowRouteActions(SqlConnection connection, int routeID, int routeLength, int routeCountry, decimal routePrice)
@@ -40,6 +42,8 @@ namespace TravelAgencyWinForms
                 numericUpDownPrice.Value = routePrice;
             };
             del();
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void GetDataFromServer()

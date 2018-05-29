@@ -43,78 +43,83 @@
             // numericUpDownPrice
             // 
             this.numericUpDownPrice.DecimalPlaces = 4;
-            this.numericUpDownPrice.Location = new System.Drawing.Point(51, 153);
+            this.numericUpDownPrice.Location = new System.Drawing.Point(68, 200);
+            this.numericUpDownPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDownPrice.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.numericUpDownPrice.Name = "numericUpDownPrice";
-            this.numericUpDownPrice.Size = new System.Drawing.Size(200, 20);
+            this.numericUpDownPrice.Size = new System.Drawing.Size(223, 25);
             this.numericUpDownPrice.TabIndex = 0;
             // 
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(51, 111);
+            this.comboBoxCountry.Location = new System.Drawing.Point(68, 145);
+            this.comboBoxCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxCountry.Name = "comboBoxCountry";
-            this.comboBoxCountry.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxCountry.Size = new System.Drawing.Size(223, 25);
             this.comboBoxCountry.TabIndex = 1;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(51, 212);
+            this.buttonAdd.Location = new System.Drawing.Point(12, 358);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(279, 30);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "button1";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(51, 241);
+            this.buttonSave.Location = new System.Drawing.Point(15, 358);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(276, 30);
             this.buttonSave.TabIndex = 5;
-            this.buttonSave.Text = "button2";
+            this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(173, 292);
+            this.buttonClose.Location = new System.Drawing.Point(15, 396);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.Size = new System.Drawing.Size(276, 30);
             this.buttonClose.TabIndex = 6;
-            this.buttonClose.Text = "button3";
+            this.buttonClose.Text = "Отмена";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 114);
+            this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Страна";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 155);
+            this.label4.Location = new System.Drawing.Point(12, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Цена";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 53);
+            this.label1.Location = new System.Drawing.Point(9, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.Size = new System.Drawing.Size(140, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Длительность (в днях)";
             // 
@@ -125,16 +130,17 @@
             "7",
             "14",
             "28"});
-            this.comboBoxLength.Location = new System.Drawing.Point(51, 69);
+            this.comboBoxLength.Location = new System.Drawing.Point(156, 90);
+            this.comboBoxLength.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxLength.Name = "comboBoxLength";
-            this.comboBoxLength.Size = new System.Drawing.Size(197, 21);
+            this.comboBoxLength.Size = new System.Drawing.Size(135, 25);
             this.comboBoxLength.TabIndex = 13;
             // 
             // WindowRouteActions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 336);
+            this.ClientSize = new System.Drawing.Size(303, 439);
             this.Controls.Add(this.comboBoxLength);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -144,6 +150,8 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.comboBoxCountry);
             this.Controls.Add(this.numericUpDownPrice);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "WindowRouteActions";
             this.Text = "WindowRouteActions";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrice)).EndInit();

@@ -51,30 +51,44 @@ namespace TravelAgencyWinForms
             if ((bool)sqlCommand.ExecuteScalar())
             {
                 int emp;
+                string empName;
 
                 using (SqlCommand command = new SqlCommand(
-                    $"SELECT EmployeeID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')", ActiveConnection))
+                    $"SELECT EmployeeFirstName + ' ' + EmployeeMiddleName" +
+                    $",EmployeeID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')",
+                    ActiveConnection))
                 {
-                    emp = (int)command.ExecuteScalar();
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    sqlDataReader.Read();
+                    empName = "Привет, " + Convert.ToString(sqlDataReader[0]);
+                    emp = Convert.ToInt32(sqlDataReader[1]);
+                    sqlDataReader.Close();
                 }
 
                 var contractsForm = new WindowContracts(ActiveConnection, emp);
                 contractsForm.Show();
+                contractsForm.SayHello(empName);
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль.", "Ошибка", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                foreach (var control in this.Controls)
+                if (MessageBox.Show("Неверный логин или пароль.", "Ошибка", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                 {
-                    if (control is TextBox)
+                    foreach (var control in this.Controls)
                     {
-                        (control as TextBox).Clear();
+                        if (control is TextBox)
+                        {
+                            (control as TextBox).Clear();
+                        }
                     }
+
+                    bytePassword = null;
+                    password = null;
                 }
-            }
-            bytePassword = null;
-            password = null;
-            Dispose();
+                else
+                {
+                    Dispose();
+                }
+            } 
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -42,6 +42,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            this.Text = "Добавить";
+            buttonSave.Visible = false;
         }
 
         public WindowHotelActions(SqlConnection connection,
@@ -68,6 +70,8 @@ namespace TravelAgencyWinForms
                 pictureBoxPhoto.Image = ByteToImage(hotelPhoto);
             };
             del();
+            this.Text = "Изменить";
+            buttonAdd.Visible = false;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

@@ -22,6 +22,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             GetDataFromServer();
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowVoucherActions(SqlConnection connection, int voucherID, 
@@ -35,6 +37,8 @@ namespace TravelAgencyWinForms
             comboBoxHotelID.SelectedValue = hotel;
             comboBoxRouteID.SelectedValue = route;
             textBoxPrice.Text = Convert.ToString(price);
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void GetDataFromServer()

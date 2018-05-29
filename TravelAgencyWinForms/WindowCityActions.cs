@@ -26,6 +26,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             GetDataFromServer();
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowCityActions(SqlConnection connection, int cityID, string cityName, int countryID)
@@ -41,6 +43,8 @@ namespace TravelAgencyWinForms
                 comboBoxCountry.SelectedValue = countryID;
             };
             del();
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void GetDataFromServer()

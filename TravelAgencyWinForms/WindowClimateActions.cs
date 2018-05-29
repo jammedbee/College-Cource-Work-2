@@ -23,6 +23,8 @@ namespace TravelAgencyWinForms
         {
             InitializeComponent();
             ActiveConnection = connection;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowClimateActions(SqlConnection connection, int climateID, string cliamateName, string climateDescription)
@@ -36,6 +38,8 @@ namespace TravelAgencyWinForms
                 richTextBoxDescription.Text = climateDescription;
             };
             del();
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

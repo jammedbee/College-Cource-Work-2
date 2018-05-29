@@ -26,6 +26,8 @@ namespace TravelAgencyWinForms
             InitializeComponent();
             ActiveConnection = connection;
             Login = login;
+            buttonSave.Visible = false;
+            this.Text = "Добавить";
         }
 
         public WindowEmployeeActions(SqlConnection connection, int employeeID,
@@ -40,10 +42,12 @@ namespace TravelAgencyWinForms
             textBoxFirstName.Text = employeeFirstName;
             textBoxLastName.Text = employeeLastName;
             textBoxMiddleName.Text = employeeMiddleName;
-            textBoxPhoneNumber.Text = employeePhone;
+            maskedTextBoxPhone.Text = employeePhone;
             textBoxEmail.Text = employeeEmail;
             textBoxPaymentCardNumber.Text = employeePaymentCardNumber;
             EmployeePositionID = employeePositionID;
+            buttonAdd.Visible = false;
+            this.Text = "Изменить";
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace TravelAgencyWinForms
             SqlCommand sqlCommand = new SqlCommand
             {
                 CommandText = $"EXEC NewEmployee N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', " +
-                $"N'{textBoxMiddleName.Text}', N'{textBoxPhoneNumber.Text}', N'{textBoxEmail.Text}', " +
+                $"N'{textBoxMiddleName.Text}', N'{maskedTextBoxPhone.Text}', N'{textBoxEmail.Text}', " +
                 $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedValue}, '{Login}'",
                 Connection = ActiveConnection
             };
@@ -78,7 +82,7 @@ namespace TravelAgencyWinForms
             SqlCommand sqlCommand = new SqlCommand
             {
                 CommandText = $"EXEC UpdateEmployee {EmployeeID}, N'{textBoxFirstName.Text}', N'{textBoxLastName.Text}', " +
-                $"N'{textBoxMiddleName.Text}', N'{textBoxPhoneNumber.Text}', N'{textBoxEmail.Text}', " +
+                $"N'{textBoxMiddleName.Text}', N'{maskedTextBoxPhone.Text}', N'{textBoxEmail.Text}', " +
                 $"N'{textBoxPaymentCardNumber.Text}', {comboBoxPositionID.SelectedValue}",
                 Connection = ActiveConnection
             };
