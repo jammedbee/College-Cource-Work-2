@@ -63,6 +63,12 @@
     <Compile Include="WindowClientActions.Designer.cs">
       <DependentUpon>WindowClientActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowClients.Designer.cs">
+      <DependentUpon>WindowClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowClimateActions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowClientActions.resx">
       <DependentUpon>WindowClientActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowClients.resx">
+      <DependentUpon>WindowClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowClimateActions.resx">
       <DependentUpon>WindowClimateActions.cs</DependentUpon>

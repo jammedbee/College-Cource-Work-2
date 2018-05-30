@@ -421,5 +421,26 @@ namespace TravelAgencyWinForms
                 }
 
         }
+
+        private void закртытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
+        }
+
+        private void отелиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowHotels(ActiveConnection)).Show(this);
+        }
+
+        private void должностиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowPositions(ActiveConnection)).Show(this);
+        }
+
+        private void клиентыToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            (new WindowClients(ActiveConnection)).Show(this);
+        }
     }
 }
