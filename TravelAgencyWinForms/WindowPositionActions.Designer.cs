@@ -59,7 +59,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(12, 258);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(304, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(248, 30);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.buttonSave.Location = new System.Drawing.Point(12, 258);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(304, 30);
+            this.buttonSave.Size = new System.Drawing.Size(248, 30);
             this.buttonSave.TabIndex = 3;
             this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(12, 296);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(304, 30);
+            this.buttonCancel.Size = new System.Drawing.Size(248, 30);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 338);
+            this.ClientSize = new System.Drawing.Size(271, 338);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
@@ -119,7 +119,10 @@
             this.Controls.Add(this.textBoxPositionName);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "WindowPositionActions";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "WindowPositionActions";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPositionOverheadPercentage)).EndInit();
             this.ResumeLayout(false);

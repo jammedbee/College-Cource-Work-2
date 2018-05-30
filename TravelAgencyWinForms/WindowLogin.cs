@@ -54,20 +54,20 @@ namespace TravelAgencyWinForms
                 string empName;
 
                 using (SqlCommand command = new SqlCommand(
-                    $"SELECT EmployeeFirstName + ' ' + EmployeeMiddleName" +
+                    $"SELECT EmployeeFirstName" +
                     $",EmployeeID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')",
                     ActiveConnection))
                 {
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     sqlDataReader.Read();
-                    empName = "Привет, " + Convert.ToString(sqlDataReader[0]);
+                    empName = Convert.ToString(sqlDataReader[0]);
                     emp = Convert.ToInt32(sqlDataReader[1]);
                     sqlDataReader.Close();
                 }
 
                 var contractsForm = new WindowContracts(ActiveConnection, emp);
                 contractsForm.Show();
-                contractsForm.SayHello(empName);
+                contractsForm.SayHello("Привет, " + empName);
             }
             else
             {

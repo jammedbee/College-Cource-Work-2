@@ -48,10 +48,10 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(12, 315);
+            this.buttonLogin.Location = new System.Drawing.Point(12, 291);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(366, 30);
+            this.buttonLogin.Size = new System.Drawing.Size(366, 41);
             this.buttonLogin.TabIndex = 2;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(12, 353);
+            this.buttonCancel.Location = new System.Drawing.Point(12, 340);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(366, 30);
+            this.buttonCancel.Size = new System.Drawing.Size(366, 43);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Выход";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -122,6 +122,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "WindowLogin";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WindowLogin_FormClosed);

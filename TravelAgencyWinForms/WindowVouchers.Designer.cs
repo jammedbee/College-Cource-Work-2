@@ -39,6 +39,7 @@
             // 
             this.dataGridViewVouchers.AllowUserToAddRows = false;
             this.dataGridViewVouchers.AllowUserToDeleteRows = false;
+            this.dataGridViewVouchers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewVouchers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewVouchers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVouchers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -52,6 +53,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(801, 399);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -64,6 +66,7 @@
             // 
             // buttonSave
             // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.Location = new System.Drawing.Point(843, 399);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -76,6 +79,7 @@
             // 
             // buttonDelete
             // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDelete.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(885, 399);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

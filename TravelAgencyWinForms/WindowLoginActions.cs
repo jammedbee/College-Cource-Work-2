@@ -53,7 +53,7 @@ namespace TravelAgencyWinForms
 
             SqlCommand sqlCommand = new SqlCommand
             {
-                CommandText = $"EXEC AddLogin {textBoxName.Text}, {password}",
+                CommandText = $"EXEC AddLogin N'{textBoxName.Text}', N'{password}'",
                 Connection = ActiveConnection
             };
 
