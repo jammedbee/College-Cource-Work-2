@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace TravelAgencyWinForms
 {
@@ -425,7 +426,7 @@ namespace TravelAgencyWinForms
         private void закртытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void отелиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -441,6 +442,159 @@ namespace TravelAgencyWinForms
         private void клиентыToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             (new WindowClients(ActiveConnection)).Show(this);
+        }
+
+        private void buttonExportAsDocx_Click(object sender, EventArgs e)
+        {
+            string[] data = new string[10];
+            using (SqlCommand sqlCommand = new SqlCommand())
+            {
+                sqlCommand.CommandText = $"SELECT " +
+                        $"ContractID AS '#'" +
+                        $",ContractDateOfIssue AS 'Дата оформления'" +
+                        $",EmployeeLastName + ' ' + EmployeeFirstName + ' ' + EmployeeMiddleName AS 'Сотрудник'" +
+                        $",ContractTotalPrice AS 'Общая стоимость'" +
+                        $",ClientLastName + ' ' + ClientFirstName + ' ' + ClientMiddleName AS 'Клиент'" +
+                        $",VoucherDepartDate AS 'Дата отправления'" +
+                        $",RouteTimeLength AS 'Длиительность (дни)'" +
+                        $",CountryName AS 'Страна назначения'" +
+                        $",CityName AS 'Город'" +
+                        $",HotelName + ', ' + HotelAddress AS 'Отель'" +
+                    $" FROM[Contract] " +
+                        $"JOIN Client ON ContractClientID = ClientID " +
+                        $"JOIN Employee ON ContractEmployeeID = EmployeeID " +
+                        $"JOIN Voucher ON ContractVoucherNumber = VoucherID " +
+                        $"JOIN[Route] ON VoucherRouteID = RouteID " +
+                        $"JOIN Hotel ON VoucherHotelID = HotelID " +
+                        $"JOIN Country ON RouteCountryID = CountryID " +
+                        $"JOIN City ON HotelCityID = CityID " +
+                    $"WHERE (ContractID = {(int)dataGridViewContracts.CurrentRow.Cells[0].Value})";
+                sqlCommand.Connection = ActiveConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                if (sqlDataReader.HasRows)
+                {
+                    sqlDataReader.Read();
+                    data[0] = Convert.ToString(sqlDataReader[4]);
+                    data[1] = Convert.ToString(sqlDataReader[8]);
+                    data[2] = Convert.ToString(sqlDataReader[7]);
+                    data[3] = Convert.ToString(sqlDataReader[9]);
+                    data[4] = Convert.ToString(sqlDataReader[0]);
+                    data[5] = Convert.ToString(sqlDataReader[1]);
+                    data[6] = Convert.ToString(sqlDataReader[3]);
+                    data[7] = Convert.ToDateTime(sqlDataReader[5]).ToShortDateString();
+                    data[8] = Convert.ToString(sqlDataReader[6]);
+                }
+                sqlDataReader.Close();
+            }
+
+            Word.Document document = null;
+
+            try
+            {
+                object template = Environment.CurrentDirectory + "\\mainTemplate.dotx";
+                Word.Application application = new Word.Application();
+                document = application.Documents.Add(ref template);
+                document.Activate();
+
+                Word.Bookmarks bookmarks = document.Bookmarks;
+                Word.Range range;
+
+                int i = 0;
+
+                foreach (Word.Bookmark bookmark in bookmarks)
+                {
+                    range = bookmark.Range;
+                    range.Text = data[i];
+                    i++;
+                }
+
+                document.Close();
+                document = null;
+                application.Quit();
+            }
+            catch (Exception exception)
+            {
+                document.Close();
+                document = null;
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            string[] data = new string[10];
+            using (SqlCommand sqlCommand = new SqlCommand())
+            {
+                sqlCommand.CommandText = $"SELECT " +
+                        $"ContractID AS '#'" +
+                        $",ContractDateOfIssue AS 'Дата оформления'" +
+                        $",EmployeeLastName + ' ' + EmployeeFirstName + ' ' + EmployeeMiddleName AS 'Сотрудник'" +
+                        $",ContractTotalPrice AS 'Общая стоимость'" +
+                        $",ClientLastName + ' ' + ClientFirstName + ' ' + ClientMiddleName AS 'Клиент'" +
+                        $",VoucherDepartDate AS 'Дата отправления'" +
+                        $",RouteTimeLength AS 'Длиительность (дни)'" +
+                        $",CountryName AS 'Страна назначения'" +
+                        $",CityName AS 'Город'" +
+                        $",HotelName + ', ' + HotelAddress AS 'Отель'" +
+                    $" FROM[Contract] " +
+                        $"JOIN Client ON ContractClientID = ClientID " +
+                        $"JOIN Employee ON ContractEmployeeID = EmployeeID " +
+                        $"JOIN Voucher ON ContractVoucherNumber = VoucherID " +
+                        $"JOIN[Route] ON VoucherRouteID = RouteID " +
+                        $"JOIN Hotel ON VoucherHotelID = HotelID " +
+                        $"JOIN Country ON RouteCountryID = CountryID " +
+                        $"JOIN City ON HotelCityID = CityID " +
+                    $"WHERE (ContractID = {(int)dataGridViewContracts.CurrentRow.Cells[0].Value})";
+                sqlCommand.Connection = ActiveConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                if (sqlDataReader.HasRows)
+                {
+                    sqlDataReader.Read();
+                    data[0] = Convert.ToString(sqlDataReader[4]);
+                    data[1] = Convert.ToString(sqlDataReader[8]);
+                    data[2] = Convert.ToString(sqlDataReader[7]);
+                    data[3] = Convert.ToString(sqlDataReader[9]);
+                    data[4] = Convert.ToString(sqlDataReader[0]);
+                    data[5] = Convert.ToString(sqlDataReader[1]);
+                    data[6] = Convert.ToString(sqlDataReader[3]);
+                    data[7] = Convert.ToDateTime(sqlDataReader[5]).ToShortDateString();
+                    data[8] = Convert.ToString(sqlDataReader[6]);
+                }
+                sqlDataReader.Close();
+            }
+
+            Word.Document document = null;
+
+            try
+            {
+                object template = Environment.CurrentDirectory + "\\mainTemplate.dotx";
+                Word.Application application = new Word.Application();
+                document = application.Documents.Add(ref template);
+                document.Activate();
+
+                Word.Bookmarks bookmarks = document.Bookmarks;
+                Word.Range range;
+
+                int i = 0;
+
+                foreach (Word.Bookmark bookmark in bookmarks)
+                {
+                    range = bookmark.Range;
+                    range.Text = data[i];
+                    i++;
+                }
+
+                document.PrintOut();
+                document.Close();
+                document = null;
+                application.Quit();
+            }
+            catch (Exception exception)
+            {
+                document.Close();
+                document = null;
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }

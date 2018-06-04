@@ -30,10 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.закртытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.спискиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.путёвкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.маршрутыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отелиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.должностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dEVELOPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOSITIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,9 +129,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.должностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.закртытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonExportAsDocx = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -159,6 +161,13 @@
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
+            // закртытьToolStripMenuItem
+            // 
+            this.закртытьToolStripMenuItem.Name = "закртытьToolStripMenuItem";
+            this.закртытьToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.закртытьToolStripMenuItem.Text = "Закртыть";
+            this.закртытьToolStripMenuItem.Click += new System.EventHandler(this.закртытьToolStripMenuItem_Click);
+            // 
             // спискиToolStripMenuItem
             // 
             this.спискиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -174,23 +183,37 @@
             // путёвкиToolStripMenuItem
             // 
             this.путёвкиToolStripMenuItem.Name = "путёвкиToolStripMenuItem";
-            this.путёвкиToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.путёвкиToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.путёвкиToolStripMenuItem.Text = "Путёвки";
             this.путёвкиToolStripMenuItem.Click += new System.EventHandler(this.путёвкиToolStripMenuItem_Click);
             // 
             // маршрутыToolStripMenuItem
             // 
             this.маршрутыToolStripMenuItem.Name = "маршрутыToolStripMenuItem";
-            this.маршрутыToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.маршрутыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.маршрутыToolStripMenuItem.Text = "Маршруты";
             this.маршрутыToolStripMenuItem.Click += new System.EventHandler(this.маршрутыToolStripMenuItem_Click);
             // 
             // отелиToolStripMenuItem
             // 
             this.отелиToolStripMenuItem.Name = "отелиToolStripMenuItem";
-            this.отелиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отелиToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.отелиToolStripMenuItem.Text = "Отели";
             this.отелиToolStripMenuItem.Click += new System.EventHandler(this.отелиToolStripMenuItem_Click);
+            // 
+            // должностиToolStripMenuItem
+            // 
+            this.должностиToolStripMenuItem.Name = "должностиToolStripMenuItem";
+            this.должностиToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.должностиToolStripMenuItem.Text = "Должности";
+            this.должностиToolStripMenuItem.Click += new System.EventHandler(this.должностиToolStripMenuItem_Click);
+            // 
+            // клиентыToolStripMenuItem
+            // 
+            this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
+            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.клиентыToolStripMenuItem.Text = "Клиенты";
+            this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click_1);
             // 
             // dEVELOPToolStripMenuItem
             // 
@@ -900,7 +923,7 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(968, 456);
+            this.label13.Location = new System.Drawing.Point(1000, 657);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 17);
             this.label13.TabIndex = 9;
@@ -1016,32 +1039,35 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "label14";
             // 
-            // должностиToolStripMenuItem
+            // buttonExportAsDocx
             // 
-            this.должностиToolStripMenuItem.Name = "должностиToolStripMenuItem";
-            this.должностиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.должностиToolStripMenuItem.Text = "Должности";
-            this.должностиToolStripMenuItem.Click += new System.EventHandler(this.должностиToolStripMenuItem_Click);
+            this.buttonExportAsDocx.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportAsDocx.Location = new System.Drawing.Point(1019, 383);
+            this.buttonExportAsDocx.Name = "buttonExportAsDocx";
+            this.buttonExportAsDocx.Size = new System.Drawing.Size(71, 40);
+            this.buttonExportAsDocx.TabIndex = 11;
+            this.buttonExportAsDocx.Text = "";
+            this.buttonExportAsDocx.UseVisualStyleBackColor = true;
+            this.buttonExportAsDocx.Click += new System.EventHandler(this.buttonExportAsDocx_Click);
             // 
-            // закртытьToolStripMenuItem
+            // buttonPrint
             // 
-            this.закртытьToolStripMenuItem.Name = "закртытьToolStripMenuItem";
-            this.закртытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.закртытьToolStripMenuItem.Text = "Закртыть";
-            this.закртытьToolStripMenuItem.Click += new System.EventHandler(this.закртытьToolStripMenuItem_Click);
-            // 
-            // клиентыToolStripMenuItem
-            // 
-            this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
-            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.клиентыToolStripMenuItem.Text = "Клиенты";
-            this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click_1);
+            this.buttonPrint.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.Location = new System.Drawing.Point(1019, 429);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(71, 44);
+            this.buttonPrint.TabIndex = 12;
+            this.buttonPrint.Text = "";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // WindowContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 758);
+            this.Controls.Add(this.buttonPrint);
+            this.Controls.Add(this.buttonExportAsDocx);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox2);
@@ -1180,5 +1206,7 @@
         private System.Windows.Forms.ToolStripMenuItem закртытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem должностиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
+        private System.Windows.Forms.Button buttonExportAsDocx;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }
