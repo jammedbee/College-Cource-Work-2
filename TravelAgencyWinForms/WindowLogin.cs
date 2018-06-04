@@ -50,22 +50,23 @@ namespace TravelAgencyWinForms
 
             if ((bool)sqlCommand.ExecuteScalar())
             {
-                int emp;
+                int emp, pos;
                 string empName;
 
                 using (SqlCommand command = new SqlCommand(
                     $"SELECT EmployeeFirstName" +
-                    $",EmployeeID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')",
+                    $",EmployeeID, EmployeePositionID FROM Employee WHERE(EmployeeLogin LIKE '{textBoxLogin.Text}')",
                     ActiveConnection))
                 {
                     SqlDataReader sqlDataReader = command.ExecuteReader();
                     sqlDataReader.Read();
                     empName = Convert.ToString(sqlDataReader[0]);
                     emp = Convert.ToInt32(sqlDataReader[1]);
+                    pos = Convert.ToInt32(sqlDataReader[2]);
                     sqlDataReader.Close();
                 }
 
-                var contractsForm = new WindowContracts(ActiveConnection, emp);
+                var contractsForm = new WindowContracts(ActiveConnection, emp, pos);
                 contractsForm.Show();
                 contractsForm.SayHello("Привет, " + empName);
             }
@@ -93,7 +94,7 @@ namespace TravelAgencyWinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var contractsForm = new WindowContracts(ActiveConnection, 1);
+            var contractsForm = new WindowContracts(ActiveConnection, 1, 1);
             contractsForm.Show();
             Dispose();
         }

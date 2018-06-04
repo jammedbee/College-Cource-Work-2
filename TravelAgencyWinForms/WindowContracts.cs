@@ -18,11 +18,21 @@ namespace TravelAgencyWinForms
 
         private int EmployeeID { get; set; }
 
-        public WindowContracts(SqlConnection connection, int employeeID)
+        public WindowContracts(SqlConnection connection, int employeeID, int positionID)
         {
             InitializeComponent();
             ActiveConnection = connection;
             EmployeeID = employeeID;
+            if (positionID == 1)
+            {
+                MainMenuStrip = menuStrip1;
+                menuStrip2.Visible = false;
+            }
+            else
+            {
+                MainMenuStrip = menuStrip2;
+                menuStrip1.Visible = false;
+            }
         }
 
         public void SayHello(string employeeName)
@@ -595,6 +605,11 @@ namespace TravelAgencyWinForms
                 document = null;
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new WindowEmployees(ActiveConnection)).Show(this);
         }
     }
 }

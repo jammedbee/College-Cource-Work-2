@@ -131,6 +131,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.buttonExportAsDocx = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.спискиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.клиентыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.путёвкиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.турыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -138,6 +146,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -146,7 +155,7 @@
             this.файлToolStripMenuItem,
             this.спискиToolStripMenuItem,
             this.dEVELOPToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1100, 24);
@@ -175,7 +184,8 @@
             this.маршрутыToolStripMenuItem,
             this.отелиToolStripMenuItem,
             this.должностиToolStripMenuItem,
-            this.клиентыToolStripMenuItem});
+            this.клиентыToolStripMenuItem,
+            this.сотрудникиToolStripMenuItem});
             this.спискиToolStripMenuItem.Name = "спискиToolStripMenuItem";
             this.спискиToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.спискиToolStripMenuItem.Text = "Списки";
@@ -241,6 +251,7 @@
             this.dEVELOPToolStripMenuItem.Name = "dEVELOPToolStripMenuItem";
             this.dEVELOPToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.dEVELOPToolStripMenuItem.Text = "DEVELOP";
+            this.dEVELOPToolStripMenuItem.Visible = false;
             // 
             // pOSITIONToolStripMenuItem
             // 
@@ -922,10 +933,9 @@
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(1000, 657);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 17);
+            this.label13.Size = new System.Drawing.Size(88, 51);
             this.label13.TabIndex = 9;
             this.label13.Text = "label13";
             // 
@@ -1061,6 +1071,66 @@
             this.buttonPrint.UseVisualStyleBackColor = true;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem1,
+            this.спискиToolStripMenuItem1});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1100, 24);
+            this.menuStrip2.TabIndex = 13;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // файлToolStripMenuItem1
+            // 
+            this.файлToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.закрытьToolStripMenuItem});
+            this.файлToolStripMenuItem1.Name = "файлToolStripMenuItem1";
+            this.файлToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem1.Text = "Файл";
+            // 
+            // закрытьToolStripMenuItem
+            // 
+            this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
+            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.закрытьToolStripMenuItem.Text = "Закрыть";
+            // 
+            // спискиToolStripMenuItem1
+            // 
+            this.спискиToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.клиентыToolStripMenuItem1,
+            this.путёвкиToolStripMenuItem1,
+            this.турыToolStripMenuItem});
+            this.спискиToolStripMenuItem1.Name = "спискиToolStripMenuItem1";
+            this.спискиToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
+            this.спискиToolStripMenuItem1.Text = "Списки";
+            // 
+            // клиентыToolStripMenuItem1
+            // 
+            this.клиентыToolStripMenuItem1.Name = "клиентыToolStripMenuItem1";
+            this.клиентыToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.клиентыToolStripMenuItem1.Text = "Клиенты";
+            // 
+            // путёвкиToolStripMenuItem1
+            // 
+            this.путёвкиToolStripMenuItem1.Name = "путёвкиToolStripMenuItem1";
+            this.путёвкиToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.путёвкиToolStripMenuItem1.Text = "Путёвки";
+            // 
+            // турыToolStripMenuItem
+            // 
+            this.турыToolStripMenuItem.Name = "турыToolStripMenuItem";
+            this.турыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.турыToolStripMenuItem.Text = "Туры";
+            // 
+            // сотрудникиToolStripMenuItem
+            // 
+            this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
+            this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сотрудникиToolStripMenuItem.Text = "Сотрудники";
+            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click);
+            // 
             // WindowContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -1079,6 +1149,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridViewContracts);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1098,6 +1169,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1208,5 +1281,13 @@
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
         private System.Windows.Forms.Button buttonExportAsDocx;
         private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem закрытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem спискиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem путёвкиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem турыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сотрудникиToolStripMenuItem;
     }
 }
